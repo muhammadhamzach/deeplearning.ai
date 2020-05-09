@@ -19,14 +19,14 @@ Instructor: Andrew Ng, DeepLearning.ai
 * Week3 - Hyperparameter tuning, Batch Normalization and Programming Frameworks  
 
 ## Course 3. Structuring Machine Learning Projects
-Week1 - Introduction to ML Strategy 
-      - Setting up your goal 
-      - Comparing to human-level performance
-Week2 - ML Strategy (2) 
-      - Error Analysis 
-      - Mismatched training and dev/test set 
-      - Learning from multiple tasks 
-      - End-to-end deep learning  
+* Week1 - Introduction to ML Strategy 
+        - Setting up your goal 
+        - Comparing to human-level performance
+* Week2 - ML Strategy (2) 
+        - Error Analysis 
+        - Mismatched training and dev/test set 
+        - Learning from multiple tasks 
+        - End-to-end deep learning  
 
 ## Course 4. Convolutional Neural Networks
 * Week1 - Foundations of Convolutional Neural Networks
