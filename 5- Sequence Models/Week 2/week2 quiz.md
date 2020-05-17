@@ -13,6 +13,7 @@
 	- I'm feeling wonderful today!	1
 	- I'm bummed my cat is ill.	0
 	- Really enjoying this!	1  
+
 Then even if the word “ecstatic” does not appear in your small training set, your RNN might reasonably be expected to recognize “I’m ecstatic” as deserving a label y = 1.
 
 	> True
@@ -20,6 +21,7 @@ Then even if the word “ecstatic” does not appear in your small training set,
 4. Which of these equations do you think should hold for a good word embedding? (Check all that apply)
 
 	> e_{boy} - e_{girl} ≈ e_{brother} - e_{sister}
+
 	> e_{boy} - e_{brother} ≈ e_{girl} - e_{sister} 
 
 5. Let EE be an embedding matrix, and let o1234 be a one-hot vector corresponding to word 1234. Then to get the embedding of word 1234, why don’t we call E∗o1234 in Python?
@@ -39,6 +41,7 @@ P(t∣c)=eθTtec∑10000t′=1eθTt′ec
 Which of these statements are correct? Check all that apply.
 
 	> θt and ec are both 500 dimensional vectors.
+
 	> θt and ec are both trained with an optimization algorithm such as Adam or gradient descent.
 
 9. Suppose you have a 10000 word vocabulary, and are learning 500-dimensional word embeddings.The GloVe model minimizes this objective:
@@ -46,7 +49,9 @@ min∑10,000i=1∑10,000j=1f(Xij)(θTiej+bi+b′j−logXij)2
 Which of these statements are correct? Check all that apply.
 
 	> θi and ej hould be initialized randomly at the beginning of training
+
 	> Xij is the number of times word i appears in the context of word j.
+
 	> The weighting function f(.)f(.) must satisfy f(0) = 0f(0)=0.
 
 10. You have trained word embeddings using a text dataset of m1 words. You are considering using these word embeddings for a language task, for which you have a separate labeled dataset of m2 words. Keeping in mind that using word embeddings is a form of transfer learning, under which of these circumstance would you expect the word embeddings to be helpful?

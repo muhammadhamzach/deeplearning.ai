@@ -9,7 +9,9 @@ This model is a “conditional language model” in the sense that the encoder p
 2. In beam search, if you increase the beam width BB, which of the following would you expect to be true? Check all that apply.
 
 	> Beam search will run more slowly.
+
 	> Beam search will use up more memory.
+
 	> Beam search will generally find better solutions (i.e. do a better job maximizing P(y \mid x)P(y∣x))
 
 3. In machine translation, if we carry out beam search without using sentence normalization, the algorithm will tend to output overly short translations.
