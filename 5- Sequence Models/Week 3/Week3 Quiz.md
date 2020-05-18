@@ -4,7 +4,7 @@
 1. Consider using this encoder-decoder model for machine translation.
 This model is a “conditional language model” in the sense that the encoder portion (shown in green) is modeling the probability of the input sentence xx.
 
-	> True
+	> False
 
 2. In beam search, if you increase the beam width BB, which of the following would you expect to be true? Check all that apply.
 
@@ -47,7 +47,7 @@ We can't replace s^{<t-1>} with s^{<t>} as an input to this neural network. This
 
 9. Under the CTC model, identical repeated characters not separated by the “blank” character (_) are collapsed. Under the CTC model, what does the following string collapse to? __c_oo_o_kk___b_ooooo__oo__kkk
 
-	> coookkboooooookkk
+	> cookbook
 
 10. In trigger word detection, x^{<t>) is:
 
