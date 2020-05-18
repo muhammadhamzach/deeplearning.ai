@@ -1,6 +1,6 @@
 # deeplearning.ai Specialization
 
-This repository contains all the solutions of the programming assignments and quizzes of all the courses offered at Coursera
+This repository contains all the lecture slides and solutions of all the programming assignments and quizzes of all the courses offered at Coursera Deep Learning Specialization.
 
 Instructor: Andrew Ng, DeepLearning.ai
 
