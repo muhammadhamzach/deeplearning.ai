@@ -1,5 +1,6 @@
 """YOLO_v2 Model Defined in Keras."""
 import sys
+sys.path.append("..")
 
 import numpy as np
 import tensorflow as tf
@@ -8,10 +9,8 @@ from keras.layers import Lambda
 from keras.layers.merge import concatenate
 from keras.models import Model
 
-from ..utils import compose
+from .utils import compose
 from .keras_darknet19 import (DarknetConv2D, DarknetConv2D_BN_Leaky, darknet_body)
-
-sys.path.append('..')
 
 voc_anchors = np.array(
     [[1.08, 1.19], [3.42, 4.41], [6.63, 11.38], [9.42, 5.11], [16.62, 10.52]])
@@ -28,8 +27,7 @@ def space_to_depth_x2(x):
     # Import currently required to make Lambda work.
     # See: https://github.com/fchollet/keras/issues/5088#issuecomment-273851273
     import tensorflow as tf
-    return tf.space_to_depth(x, block_size=2)
-
+    return tf.compat.v1.space_to_depth(x, block_size=2)
 
 def space_to_depth_x2_output_shape(input_shape):
     """Determine space_to_depth output shape for block_size=2.
@@ -284,7 +282,7 @@ def yolo_loss(args,
     total_loss = 0.5 * (
         confidence_loss_sum + classification_loss_sum + coordinates_loss_sum)
     if print_loss:
-        total_loss = tf.Print(
+        total_loss = tf.compat.v1.Print(
             total_loss, [
                 total_loss, confidence_loss_sum, classification_loss_sum,
                 coordinates_loss_sum
@@ -338,7 +336,7 @@ def yolo_eval(yolo_outputs,
 
     # TODO: Something must be done about this ugly hack!
     max_boxes_tensor = K.variable(max_boxes, dtype='int32')
-    K.get_session().run(tf.variables_initializer([max_boxes_tensor]))
+    K.get_session().run(tf.compat.v1.variables_initializer([max_boxes_tensor]))
     nms_index = tf.image.non_max_suppression(
         boxes, scores, max_boxes_tensor, iou_threshold=iou_threshold)
     boxes = K.gather(boxes, nms_index)

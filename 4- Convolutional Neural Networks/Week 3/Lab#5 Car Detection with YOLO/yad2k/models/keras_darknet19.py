@@ -2,13 +2,16 @@
 import functools
 from functools import partial
 
+import sys
+sys.path.append("..")
+
 from keras.layers import Conv2D, MaxPooling2D
 from keras.layers.advanced_activations import LeakyReLU
 from keras.layers.normalization import BatchNormalization
 from keras.models import Model
 from keras.regularizers import l2
 
-from ..utils import compose
+from .utils import compose
 
 # Partial wrapper for Convolution2D with static default argument.
 _DarknetConv2D = partial(Conv2D, padding='same')
